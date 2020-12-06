@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"log"
 	"os"
+	"strconv"
 )
 
 func readFileLines(path string) []string {
@@ -23,4 +24,27 @@ func readFileLines(path string) []string {
 		log.Fatal(err)
 	}
 	return toReturn
+}
+
+func inBetween(i, min, max int) bool {
+	if (i >= min) && (i <= max) {
+		return true
+	}
+	return false
+}
+
+func stringInSlice(a string, list []string) bool {
+	for _, b := range list {
+		if b == a {
+			return true
+		}
+	}
+	return false
+}
+
+func isStringInt(v string) bool {
+	if _, err := strconv.Atoi(v); err == nil {
+		return true
+	}
+	return false
 }
