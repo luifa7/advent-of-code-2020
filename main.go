@@ -11,5 +11,8 @@ func main() {
 	// reedTheMap()
 	// reedTheMapPart2()
 	// fourth day
-	countCorrectPassports()
+	// countCorrectPassports()
+	// fifth day
+	// findHighestSeatID()
+	findMySeatID()
 }

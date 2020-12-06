@@ -48,3 +48,11 @@ func isStringInt(v string) bool {
 	}
 	return false
 }
+
+func convertByteStringToInt(byteString string) int {
+	if i, err := strconv.ParseInt(byteString, 2, 64); err != nil {
+		return -1
+	} else {
+		return int(i)
+	}
+}
