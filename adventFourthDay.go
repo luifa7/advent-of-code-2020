@@ -9,24 +9,15 @@ import (
 var pathToInputFourthDay = pathToInputs + "04"
 
 func countCorrectPassports() int {
-	pasportsInStrings := readFileLines(pathToInputFourthDay)
-
+	passportsInSlice := getSliceOfSlicesWithoutBlankSeparation(readFileLines(pathToInputFourthDay))
 	correctPassportCounter := 0
-	startSubSlice := 0
-	endSubSlice := 0
 
-	for i, s := range pasportsInStrings {
-		if s == "" {
-			endSubSlice = i
-			if analyzePassportWithValidations(pasportsInStrings[startSubSlice:endSubSlice]) {
-				correctPassportCounter++
-			}
-			startSubSlice = i
+	for _, p := range passportsInSlice {
+		if analyzePassportWithValidations(p) {
+			correctPassportCounter++
 		}
 	}
-	if analyzePassportWithValidations(pasportsInStrings[startSubSlice:]) {
-		correctPassportCounter++
-	}
+
 	fmt.Println(correctPassportCounter)
 	return correctPassportCounter
 }
