@@ -3,6 +3,7 @@ package main
 import "os"
 
 var pwd, _ = os.Getwd()
+var pathToInputs = pwd + "/inputs/"
 
 func main() {
 	// first day
@@ -18,5 +19,7 @@ func main() {
 	// countCorrectPassports()
 	// fifth day
 	// findHighestSeatID()
-	findMySeatID()
+	// findMySeatID()
+	// sisxth day
+	sumOfNumberOFQuestionsWithYes()
 }

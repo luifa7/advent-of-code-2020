@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 	"strconv"
+	"strings"
 )
 
 func readFileLines(path string) []string {
@@ -55,4 +56,38 @@ func convertByteStringToInt(byteString string) int {
 		return -1
 	}
 	return int(i)
+}
+
+func removeDuplicateValues(s string) string {
+	var toReturn string
+	for _, letter := range s {
+		if !strings.Contains(toReturn, string(letter)) {
+			toReturn += string(letter)
+		}
+	}
+	return toReturn
+}
+
+func getOneStringWithAllValuesInSlice(s []string) string {
+	var oneBigString string
+	for _, value := range s {
+		oneBigString += value
+	}
+	return oneBigString
+}
+
+func getSliceOfSlicesWithoutBlankSeparation(s []string) [][]string {
+	var sliceToReturn [][]string
+	startSubSlice := 0
+	endSubSlice := 0
+
+	for i, v := range s {
+		if v == "" {
+			endSubSlice = i
+			sliceToReturn = append(sliceToReturn, s[startSubSlice:endSubSlice])
+			startSubSlice = i + 1
+		}
+	}
+	sliceToReturn = append(sliceToReturn, s[startSubSlice:])
+	return sliceToReturn
 }
