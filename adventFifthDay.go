@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-var pathToInputFifthDay = pwd + "/inputs/input_05"
+var pathToInputFifthDay = pathToInputs + "05"
 
 func findHighestSeatID() int {
 	highest := -1

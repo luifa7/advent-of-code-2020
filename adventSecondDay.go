@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-var pathToInputSecondDay = pwd + "/inputs/input_02"
+var pathToInputSecondDay = pathToInputs + "02"
 
 func parsePassLinesToStruct() []password {
 	resutl := readFileLines(pathToInputSecondDay)

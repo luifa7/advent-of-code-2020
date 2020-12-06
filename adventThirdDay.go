@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-var pathToInputThirdDay = pwd + "/inputs/input_03"
+var pathToInputThirdDay = pathToInputs + "03"
 
 func reedTheMap() {
 	results := readFileLines(pathToInputThirdDay)

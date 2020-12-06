@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-var pathToInputFourthDay = pwd + "/inputs/input_04"
+var pathToInputFourthDay = pathToInputs + "04"
 
 func countCorrectPassports() int {
 	pasportsInStrings := readFileLines(pathToInputFourthDay)

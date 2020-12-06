@@ -5,7 +5,7 @@ import (
 	"strconv"
 )
 
-var pathToInputFirstDay = pwd + "/inputs/input_01"
+var pathToInputFirstDay = pathToInputs + "01"
 
 func parsePassLinesToInt() []int {
 	resutl := readFileLines(pathToInputFirstDay)
