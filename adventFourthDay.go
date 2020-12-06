@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-var pathToInputFourthDay = "/Users/lgodoyalvarez/other_projects/gocode/advent/input_04"
+var pathToInputFourthDay = pwd + "/inputs/input_04"
 
 func countCorrectPassports() int {
 	pasportsInStrings := readFileLines(pathToInputFourthDay)

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-var pathToInputSecondDay = "/Users/lgodoyalvarez/other_projects/gocode/advent/input_02"
+var pathToInputSecondDay = pwd + "/inputs/input_02"
 
 func parsePassLinesToStruct() []password {
 	resutl := readFileLines(pathToInputSecondDay)

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-var pathToInputFifthDay = "/Users/lgodoyalvarez/other_projects/gocode/advent/input_05"
+var pathToInputFifthDay = pwd + "/inputs/input_05"
 
 func findHighestSeatID() int {
 	highest := -1
