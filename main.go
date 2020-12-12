@@ -1,6 +1,8 @@
 package main
 
-import "os"
+import (
+	"os"
+)
 
 var pwd, _ = os.Getwd()
 var pathToInputs = pwd + "/inputs/"
@@ -21,5 +23,7 @@ func main() {
 	// findHighestSeatID()
 	// findMySeatID()
 	// sisxth day
-	sumOfNumberOFQuestionsWithYes()
+	// sumOfNumberOFQuestionsWithYes()
+	// bagsCount()
+	// breakAccBeforeRepeat()
 }
