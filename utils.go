@@ -34,9 +34,9 @@ func inBetween(i, min, max int) bool {
 	return false
 }
 
-func stringInSlice(a string, list []string) bool {
-	for _, b := range list {
-		if b == a {
+func stringInSlice(s string, ss []string) bool {
+	for _, b := range ss {
+		if b == s {
 			return true
 		}
 	}
@@ -90,4 +90,16 @@ func getSliceOfSlicesWithoutBlankSeparation(s []string) [][]string {
 	}
 	sliceToReturn = append(sliceToReturn, s[startSubSlice:])
 	return sliceToReturn
+}
+
+func unique(strSlice []string) []string {
+	keys := make(map[string]bool)
+	list := []string{}
+	for _, entry := range strSlice {
+		if _, value := keys[entry]; !value {
+			keys[entry] = true
+			list = append(list, entry)
+		}
+	}
+	return list
 }
