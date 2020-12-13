@@ -103,3 +103,14 @@ func unique(strSlice []string) []string {
 	}
 	return list
 }
+
+func convertSSIntoSI(ss []string) []int {
+	var r []int
+
+	for _, s := range ss {
+		n, _ := strconv.Atoi(s)
+		r = append(r, n)
+	}
+
+	return r
+}
