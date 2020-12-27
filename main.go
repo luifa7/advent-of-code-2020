@@ -27,5 +27,7 @@ func main() {
 	// bagsCount()
 	// breakAccBeforeRepeat()
 	// findWrongXMAS()
-	resolveXmasWrongCode()
+	// resolveXmasWrongCode()
+	// understandTheGame()
+	findTheNumber2()
 }
